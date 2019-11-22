@@ -1,4 +1,4 @@
-include .env
+include .env.wp
 
 .PHONY: up down stop prune ps shell wp logs
 
@@ -7,7 +7,7 @@ default: up
 WP_ROOT ?= /var/www/html/
 
 ## help	:	Print commands help.
-help : docker.mk
+help : docker.wp.mk
 	@sed -n 's/^##//p' $<
 
 ## up	:	Start up containers.
